@@ -11,7 +11,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   // IMPORTANT: Change this to your deployed site URL
-  site: `https://pchamallow.github.io`,
+  site: `https://localhost:4321`,
   base: `/Portfolio`,
 
   vite: {
