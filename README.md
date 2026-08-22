@@ -1,135 +1,106 @@
-# Breeze
+# Astro Academia Documentation
 
-A minimal, clean Astro theme for personal websites and blogs.
+## What is Astro Academia?
 
-Built with [Astro 5](https://astro.build), [Tailwind CSS v4](https://tailwindcss.com), and TypeScript.
+Astro Academia is a personal academic website built using Astro, a modern static site generator. The website is designed to showcase academic achievements, research papers, blog posts, and a CV. It is fast, responsive, and easy to maintain, making it an ideal platform for academics and researchers to present their work.
 
-[中文文档 / Chinese Documentation](./README.zh-CN.md)
+If you find Astro Academia useful or appreciate my work, consider supporting me! Your support helps keep this project maintained and encourages further development. 🚀✨
 
-[Changelog](./CHANGELOG.md)
+<a href="https://buymeacoffee.com/maiobarbero" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.producthunt.com/products/astro-academia?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-astro&#0045;academia" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1026976&theme=light&t=1760776422941" alt="Astro&#0032;Academia - Academic&#0032;website&#0032;template | Product Hunt" style="width: 189px; height: 41px;" width="189" height="41" /></a>
 
-## Features
+### Demo
+You can see Astro Academia at the following link: <a href="https://maiobarbero.github.io/astro_academia/" target="_blank">demo page</a>
 
-- Dark / Light mode with smooth toggle
-- Full-text search (Pagefind, Cmd+K)
-- RSS feed and sitemap
-- Artalk comments (optional)
-- Umami analytics (optional)
-- Content collections (posts, projects, categories, tags, friends)
-- Table of contents for posts
-- Expressive Code syntax highlighting
-- View Transitions
-- Responsive design
-- OKLch color system with easy hue customization
+## How to use it
 
-## Quick Start
+Fork this repository to create your new website starting from this template.
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/astro-theme-breeze.git my-site
-cd my-site
+## How to Create a CV Using the `cv.ts` File
 
-# Install dependencies
-pnpm install
+The `cv.ts` file located in the `src/data/` directory is used to define the structure and content of your CV. This file exports an object containing various sections of your CV, such as education, experience, publications, and more.
 
-# Start development server
-pnpm dev
+### Example Structure of `cv.ts`
 
-# Build for production
-pnpm build
+```typescript
+export const cv = {
+  education: [
+    {
+      degree: "Ph.D. in Computer Science",
+      institution: "University of Example",
+      year: "2020",
+    },
+    {
+      degree: "M.Sc. in Computer Science",
+      institution: "University of Example",
+      year: "2016",
+    },
+  ],
+  experience: [
+    {
+      title: "Research Scientist",
+      company: "Example Research Lab",
+      year: "2021-Present",
+    },
+    {
+      title: "Software Engineer",
+      company: "Tech Company",
+      year: "2016-2021",
+    },
+  ],
+  // Add more sections as needed
+};
 ```
 
-## Configuration
+To create or update your CV, modify the `cv.ts` file with your personal information and achievements. The CV will be automatically rendered on the CV page of your website.
 
-All site configuration is in `src/config/site.ts`. This is the only file you need to edit to personalize the theme.
+## How to Use the `settings.ts` File
 
-| Section      | Description                                     |
-| ------------ | ----------------------------------------------- |
-| `meta`       | Site title, description, author, logo, language |
-| `navigation` | Navigation menu items with subtitle labels      |
-| `social`     | Social links (GitHub, Email, etc.)              |
-| `hero`       | Homepage greeting, description, info cards      |
-| `footer`     | Copyright and credit text                       |
-| `comments`   | Artalk comments configuration                   |
-| `features`   | Toggle search, RSS                              |
-| `tools`      | Tools/Stack page data                           |
-| `labels`     | All UI text labels (for i18n)                   |
+The `settings.ts` file located in the `src/` directory is used to configure various settings for your Astro Academia website. This file exports an object containing settings such as site title, description, social media links, and more.
 
-Also update `astro.config.mjs` to set your `site` URL.
+### Example Structure of `settings.ts`
 
-## Content
-
-### Blog Posts
-
-Add Markdown or MDX files to `src/content/posts/`:
-
-```yaml
----
-title: My First Post
-createdAt: 2025-01-01
-category: technology
-tags: [astro, tutorial]
-summary: A brief description of the post.
----
+```typescript
+export const settings = {
+  siteTitle: "Astro Academia",
+  siteDescription: "A personal academic website built with Astro.",
+  socialLinks: {
+    twitter: "https://twitter.com/yourusername",
+    github: "https://github.com/yourusername",
+    linkedin: "https://linkedin.com/in/yourusername",
+  },
+  // Add more settings as needed
+};
 ```
 
-### About Page
+To customize your website settings, modify the `settings.ts` file with your desired values. These settings will be used throughout your website to display the appropriate information.
 
-Edit `src/content/pages/about.md` — pure Markdown, no component knowledge needed.
+## Where to Find the Blog Collection and Where to Add New Blog Posts
 
-### Projects
+The blog collection is located in the `src/content/BlogPosts/` directory. Each blog post is a Markdown file with a `.md` extension. The blog posts are named sequentially (e.g., `post1.md`, `post2.md`, etc.).
 
-Add to `src/content/projects/` with frontmatter: `title`, `description`, `tech`, `link`, `status`.
+### Adding a New Blog Post
 
-### Categories & Tags
+1. Navigate to the `src/content/BlogPosts/` directory.
+2. Create a new Markdown file for your blog post (e.g., `post1.md`).
+3. Add the content of your blog post using Markdown syntax. Include frontmatter at the top of the file to define metadata such as title, date, and tags.
 
-Edit `src/content/miscs/categories.json` and `src/content/miscs/tags.json`.
+### Example Blog Post (`post11.md`)
 
-### Friends
+```markdown
+---
+title: "New Blog Post"
+date: "2023-10-01"
+tags: ["research", "astro"]
+excerpt: "Some short paragraphs"
+---
 
-Edit `src/content/miscs/friends.json` with `name`, `description`, `link`, `avatar`.
+# New Blog Post
 
-## Theme Colors
+This is the content of the new blog post. Write your article here using Markdown syntax.
+```
 
-Edit `src/styles/theme.css`. All colors use OKLch with a consistent hue value (default: 165).
-
-To change the color palette, find-and-replace the hue number:
-
-- `165` = Sage Green (default)
-- `250` = Ocean Blue
-- `280` = Lavender Purple
-- `330` = Rose Pink
-- `30` = Warm Orange
-
-## Comments (Artalk)
-
-1. Set up an [Artalk](https://artalk.js.org) server
-2. Copy `.env.example` to `.env`
-3. Set `PUBLIC_ARTALK_SERVER=https://your-artalk-server`
-4. Optionally set `PUBLIC_ARTALK_ENABLED=true` or `false` to force enable/disable
-
-These variables are declared in `astro.config.mjs` via `env.schema`, so Astro provides typed access automatically.
-On Cloudflare Pages, just add `PUBLIC_ARTALK_SERVER` in your project environment variables. No code change is required in `src/config/site.ts`.
-
-## Analytics (Umami)
-
-1. Copy `.env.example` to `.env`
-2. Set `UMAMI_URL=https://your-umami-script-url`
-3. Set `UMAMI_WEBSITE_ID=your-website-id`
-
-These variables are also declared in `astro.config.mjs` via `env.schema`, so Astro provides typed access automatically.
-On Cloudflare Pages, just add `UMAMI_URL` and `UMAMI_WEBSITE_ID` in your project environment variables.
+Once you have added the new blog post, it will be automatically included in the blog collection and displayed on the blog page of your website.
 
 ## Deploy
-
-Works with any static hosting: Vercel, Netlify, Cloudflare Pages, etc.
-
-```bash
-pnpm build
-```
-
-The output is in `dist/`.
-
-## License
-
-MIT
+The template provides a workflow to deploy the website on Github pages as a static website.

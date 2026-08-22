@@ -1,48 +1,28 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import site from "@/config/site";
+import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout title="404" description="not found">
-  <div
-    class="animate-in fade-in zoom-in flex h-full flex-col items-center justify-center p-8 text-center duration-700 md:p-16"
-  >
-    <div class="relative mb-8">
-      <h2
-        class="text-[8rem] leading-none font-black text-primary/5 select-none md:text-[12rem]"
-      >
-        404
-      </h2>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <span
-          class="text-2xl font-bold tracking-tight text-foreground/80 md:text-3xl"
-        >
-          {site.labels.notFoundTitle}
-        </span>
-      </div>
-    </div>
-
-    <div class="mx-auto max-w-xs space-y-6">
-      <p class="text-base leading-relaxed font-light text-muted-foreground">
-        {site.labels.notFoundDescription}
+<Layout title="404 - Page Not Found">
+  <div class="min-h-[70vh] flex flex-col items-center justify-center text-center">
+    <h1 class="text-9xl font-black text-base-content mb-4">404</h1>
+    <h2 class="text-4xl font-bold text-base-content mb-8">Page Not Found</h2>
+      <p class="text-lg text-base-content/80 mb-8">
+        Looks like this page went on a coffee break. ☕<br/>
+        Even our smartest algorithms couldn't find it!
       </p>
-
-      <div class="mx-auto h-px w-12 bg-border"></div>
-
-      <div class="pt-4">
-        <a
-          href="/"
-          class="inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-105"
-        >
-          {site.labels.goHome}
-        </a>
-      </div>
+    <div class="flex gap-4">
+      <a
+        href="/"
+        class="btn btn-primary text-primary-content"
+      >
+        Go Home
+      </a>
+      <button
+        class="btn btn-outline btn-accent"
+        onclick="history.back()"
+      >
+        Go Back
+      </button>
     </div>
-
-    <p
-      class="mt-20 font-mono text-[10px] tracking-[0.4em] text-muted-foreground/30 uppercase"
-    >
-      Error Code: Page_Not_Found
-    </p>
   </div>
 </Layout>
