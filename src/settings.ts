@@ -27,7 +27,7 @@ export const template = {
 	menu_left: false,
 	transitions: true,
 	lightTheme: 'nord', // Select one of the Daisy UI Themes or create your own
-	darkTheme: 'nord', // Select one of the Daisy UI Themes or create your own
+	darkTheme: 'night', // Select one of the Daisy UI Themes or create your own
 	excerptLength: 200,
 	postPerPage: 5,
 	base: '/Portfolio' // Repository name starting with /
