@@ -1,6 +1,6 @@
 export const profile = {
 	fullName: 'Swirgiel Pauline',
-	title: '',
+	title: 'Développeuse en web - junior',
 	institute: '',
 	author_name: '', // Author name to be highlighted in the papers section
 	research_areas: [
@@ -10,11 +10,11 @@ export const profile = {
 
 // Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
-	email: '',
-	linkedin: '',
-	x: 'https://www.x.com/',
+	email: 'paulineswirgiel@gmail.com',
+	linkedin: 'www.linkedin.com/in/pauline-swirgiel',
+	x: '',
 	bluesky: '',
-	github: '',
+	github: 'https://github.com/Pchamallow',
 	gitlab: '',
 	scholar: '',
 	inspire: '',
@@ -26,11 +26,11 @@ export const template = {
 	website_url: 'https://localhost:4321', // Astro needs to know your site’s deployed URL to generate a sitemap. It must start with http:// or https://
 	menu_left: false,
 	transitions: true,
-	lightTheme: 'light', // Select one of the Daisy UI Themes or create your own
-	darkTheme: 'dark', // Select one of the Daisy UI Themes or create your own
+	lightTheme: 'nord', // Select one of the Daisy UI Themes or create your own
+	darkTheme: 'nord', // Select one of the Daisy UI Themes or create your own
 	excerptLength: 200,
 	postPerPage: 5,
-    base: '/Portfolio' // Repository name starting with /
+	base: '/Portfolio' // Repository name starting with /
 }
 
 export const seo = {
