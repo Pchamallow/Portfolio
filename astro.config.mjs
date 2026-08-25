@@ -10,11 +10,23 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
 	experimental: {
-		fonts: [{
-			provider: fontProviders.fontsource(),
-			name: "Roboto",
-			cssVariable: "--font-distant-galaxy",
-		}],
+		fonts: [
+			{
+				provider: fontProviders.fontsource(),
+				name: "Petit Formal Script",
+				cssVariable: "--font-monsieur-la-doulaise",
+			},
+			{
+				provider: fontProviders.fontsource(),
+				name: "Playfair Display",
+				cssVariable: "--font-playfair-display",
+			},
+			{
+				provider: fontProviders.fontsource(),
+				name: "Manrope",
+				cssVariable: "--font-manrope",
+			},
+		],
 	},
 	integrations: [react(), tailwind(), sitemap()],
 	site: template.website_url,
