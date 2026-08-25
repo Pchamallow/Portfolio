@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { Font } from "astro:assets";
 
 import { profile } from '@/settings'
 import { publications } from '@/data/cv'
@@ -17,11 +18,13 @@ const { fullName, title, institute, research_areas } = profile
 <Layout>
 	<!-- Hero Section -->
 	<section class='flex items-center gap-12 border-b pb-12'>
-		<Hero
-			fullName={fullName}
-			title={title}
-			institute={institute}
-			profilePicture={ProfilePictures}
+		<Font cssVariable="--font-distant-galaxy" 
+			<Hero
+				fullName={fullName}
+				title={title}
+				institute={institute}
+				profilePicture={ProfilePictures}
+			/>
 		/>
 	</section>
 
