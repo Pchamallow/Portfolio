@@ -64,9 +64,9 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 		height: var(--track-h);
 		padding: 0;
 		border: none;
-		border-radius: 999px;
+		border-radius: 10px;
 		cursor: pointer;
-		background: var(--track-bg, #1e293b);
+		background: var(--track-bg, #3e5c8b);
 		transition: background-color 0.3s ease;
 		-webkit-tap-highlight-color: transparent;
 	}
@@ -76,15 +76,15 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 		outline-offset: 2px;
 	}
 
-	/* Thumb slide */
+	/* Thumb slide white round */
 	.lang-toggle__thumb {
 		position: absolute;
 		top: var(--gap);
 		left: var(--gap);
 		width: var(--thumb-size);
 		height: var(--thumb-size);
-		border-radius: 50%;
-		background: #ffffff;
+		border-radius: 30%;
+		background: #d2dbe9;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 		transform: translateX(0);
 		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -140,6 +140,6 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 		});
 	}
 
-	// Réinitialise le listener après chaque navigation Astro (View Transitions)
+	// Reinitialisation
 	document.addEventListener("astro:page-load", initLangToggle);
 </script>
