@@ -42,9 +42,8 @@ const {
 			<!-- Drawer content -->
 			<div class='drawer-content bg-base-100'>
 				<div class='bg-base-100 z-50 text-base-content shadow-sm'>
-					<LanguageToggle />
 					<nav class='navbar'>
-						<div class='navbar-start'>
+						<div class='navbar-start gap-5'>
 							{template.menu_left &&
 								<DarkLightController/>
 								/* <ThemeSelector transition:persist /> */
@@ -65,6 +64,7 @@ const {
 									</svg>
 								</BetterIcon>
 							</label>
+							<LanguageToggle/>
 						</div>
 						<div class='navbar-center lg:hidden text-lg font-black'>
 							{profile.title}

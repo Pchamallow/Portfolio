@@ -7,15 +7,23 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const currentLocale = Astro.currentLocale ?? "fr";
 const isEn = currentLocale === "en";
 
-// base = "Portfolio", given by template.base in astro.config
-// pathname.startsWith(base) : verify is path begin with base
-// pathname.slice(base.length) : remove base
-// 	eg : "/Portfolio/about/".slice(11) → "about/"
-// bae !== "/" -> no base, site at root, nothing to remove
-const base = import.meta.env.BASE_URL;
+// Normalize base -> no slash at end, eg: "/Portfolio"
+// else add / forever in the path for each call at languageToggle
+// 	-> avoid "/Portfolio//////en/""
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") && rawBase !== "/" ? rawBase.slice(0, -1) : rawBase;
+
 let pathname = Astro.url.pathname;
-if (base !== "/" && pathname.startsWith(base)) {
-	pathname = "/" + pathname.slice(base.length);
+// base == "/" -> if it doesn't have a base (at root = /, no base)
+// pathname.startsWith(base) = if begin with base
+if (base !== "" && base !== "/" && pathname.startsWith(base)) {
+	// pathname.slice(base.length) -> remove base with length base
+	// eg: "/Portfolio".slice(10) -> "" -> base removed, nothing lef
+	//		"/Portfolio/en/cv/".slice(10) -> "/en/cv/" 
+	pathname = pathname.slice(base.length) || "/";
+	// if nothing left, start with /
+	if (!pathname.startsWith("/"))
+		pathname = "/" + pathname;
 }
 
 // path is clean, without base

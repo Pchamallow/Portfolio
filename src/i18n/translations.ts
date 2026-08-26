@@ -6,13 +6,12 @@ export const translations = {
 		role: "Développeuse web · exploration data & IA",
 		aboutMeLabel: "À propos de moi",
 		aboutMeText: [
-			"Je suis étudiante à 42 Angoulême, j'apprends en documentant et en construisant.",
-			"Le développement web est mon focus principal, avec la data et l'IA comme outils pour rendre mes produits plus intelligents.",
-			"Actuellement à la recherche d'une alternance pour apporter cet état d'esprit terrain à une équipe."
+			"Je suis étudiante à 42 Angoulême, où j’apprends principalement par la documentation, l’expérimentation et la réalisation de projets concrets.",
+			"Actuellement, je me concentre principalement sur le développement logiciel et web. Je souhaite également élargir progressivement mes compétences vers la data et l’intelligence artificielle, qui font partie des domaines que je souhaite explorer et développer dans la suite de mon parcours.",
 		],
 		availability: "🎯 Recherche une alternance en Web, Data ou IA — disponible dès janvier 2027",
 		onSiteLabel: "Sur ce site",
-		onSiteText: "Vous pouvez explorer mes projets web et data, ma roadmap (web, data, IA), et mon CV. Chaque page projet inclut l'objectif, les compétences utilisées, une vidéo d'exploration, et un lien vers le repo GitHub."
+		onSiteText: "Vous pourrez explorer mes projets web et data, ma roadmap (web, data, IA), et mon CV. Chaque page projet inclut l'objectif, les compétences utilisées, une vidéo d'exploration, et un lien vers le repo GitHub."
 		}
 	},
 	en: {
@@ -22,9 +21,8 @@ export const translations = {
 		role: "Web developer · exploring data & AI",
 		aboutMeLabel: "About me",
 		aboutMeText: [
-			"I'm a 42 Angoulême student who learns by documenting and building.",
-			"Web development is my main focus, with data and AI as tools I use to make products smarter.",
-			"Currently searching for an alternance to bring that hands-on mindset to a real team."
+			"I am a student at 42 Angoulême, where I learn primarily through documentation, experimentation, and hands-on projects.",
+			"Currently, my main focus is software and web development. I also plan to progressively expand my skills into data and artificial intelligence, as these are areas I am interested in exploring and developing throughout my career.",
 		],
 		availability: "🎯 Looking for an alternance in Web, Data or AI — available from January 2027",
 		onSiteLabel: "On this website",
