@@ -1,5 +1,14 @@
 # Astro Academia Documentation
 
+Contenu modifié 
+ajout/utilisation de differentes fonts
+modifications des themes
+ajout de la tech stack avec implementation des badges 
+organsitaion des segements 
+
+
+
+
 ## What is Astro Academia?
 
 Astro Academia is a personal academic website built using Astro, a modern static site generator. The website is designed to showcase academic achievements, research papers, blog posts, and a CV. It is fast, responsive, and easy to maintain, making it an ideal platform for academics and researchers to present their work.

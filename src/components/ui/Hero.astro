@@ -10,17 +10,23 @@ const {fullName, title, institute, profilePicture} = Astro.props
 	<h1 class='text-6xl mb-4 font-[family-name:var(--font-monsieur-la-doulaise)]'>
 		Welcome ! 
 	</h1>
-	<h1 class='text-6xl mb-4 font-[family-name:var(--font-monsieur-la-doulaise)]'>
+	<h1 class='text-6xl mb-6 font-[family-name:var(--font-monsieur-la-doulaise)]'>
 	I'm <span class='text-secondary'>{fullName}</span>
 	</h1>
+	<p class='text-2xl font-bold text-gray-600 mb-9 font-[family-name:var(--font-playfair-display)]'>
+	Web developer · exploring data & AI
+	</p>
 	<p class='text-2xl font-bold text-gray-600 mb-9 font-[family-name:var(--font-playfair-display)]'>{title}{institute ? ` at ${institute}` : ''}</p>
 	<p class='text-xl font-bold mb-2 font-[family-name:var(--font-manrope)]'>
 	About me <br>
 	</p>
-	<p class='text-xl mb-1 font-[family-name:var(--font-manrope)]'>
+	<p class='text-xl mb-5 font-[family-name:var(--font-manrope)]'>
 	I'm a 42 Angoulême student who learns by documenting and bulding. <br>
 	Web development is my main focus, with data and AI as tools I use to make products smarter.
 	Currently searching for an alternance to bring that hands-on mindset to a real team.
+	</p>
+	<p class="availability-badge text-xl font-bold italic mb-2 font-[family-name:var(--font-manrope)]">
+		🎯 Looking for an alternance in Web, Data or AI — available from January 2027
 	</p>
 	<div class='flex gap-4 mb-6'>
 		<SocialIcons />
@@ -29,11 +35,9 @@ const {fullName, title, institute, profilePicture} = Astro.props
 	On this website
 	</p>
 	<p class='text-xl mb-6 font-[family-name:var(--font-manrope)]'>
-	Use the menu on the left to explore my projects across Web, Data, and AI. Each project page includes the goal, the skills involved, exploratory videos, and a link to the GitHub repo.
-	You'll also find my CV available for download.
+	Use the menu on the left to explore my projects across web and data, my roadmap for what's in progress and coming next (web, data, AI), and my CV.
+	Each project page includes the goal, the skills involved, exploratory videos, and a link to the GitHub repo.
 	</p>
-
-</p>
 
 </div>
 <div class='size-72 lg:block hidden'>

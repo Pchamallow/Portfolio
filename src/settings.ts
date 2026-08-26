@@ -1,6 +1,6 @@
 export const profile = {
 	fullName: 'Swirgiel Pauline',
-	title: 'Développeuse en web - junior',
+	title: '',
 	institute: '',
 	author_name: '', // Author name to be highlighted in the papers section
 	research_areas: [

@@ -22,14 +22,25 @@ const calculatedContainerSize = activeSocial.length <= 5 ? 'size-12' : activeSoc
 
 	<!-- Email -->
 	{social.email !== '' &&
-		<a href={`mailto:${social.email}`}  class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<a
+			aria-label="Send me an email"
+			title="Send me an email"
+			href={`mailto:${social.email}`}
+			class={`${calculatedContainerSize}
+			inline-flex items-center justify-center
+			rounded-xl hover:bg-primary/20 transition-all
+			duration-300`}>
 			<Envelope class={calculatedIconSize} fill="currentColor" />
 		</a>
 	}
 
 	<!-- GitHub -->
 	{social.github !== '' &&
-		<a href={social.github} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<a 
+			href={social.github}
+			aria-label="View my GitHub profile"
+			title="View my GitHub profile"
+			target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<GitHub class={calculatedIconSize} fill="currentColor" />
 		</a>
 	}
@@ -57,7 +68,11 @@ const calculatedContainerSize = activeSocial.length <= 5 ? 'size-12' : activeSoc
 
 	<!-- Linkedin -->
 	{social.linkedin !== '' &&
-		<a href={social.linkedin} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<a
+			href={social.linkedin}
+			aria-label="Connect with me on LinkedIn"
+			title="Connect with me on LinkedIn"
+			target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<LinkedIn class={calculatedIconSize} fill="currentColor" />
 		</a>
 	}
