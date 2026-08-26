@@ -1,0 +1,137 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+// Give a clean path to API getRelativeLocaleUrl ------------------------------------
+
+// if path contain "en" -> isEn
+const currentLocale = Astro.currentLocale ?? "fr";
+const isEn = currentLocale === "en";
+
+// base = "Portfolio", given by template.base in astro.config
+// pathname.startsWith(base) : verify is path begin with base
+// pathname.slice(base.length) : remove base
+// 	eg : "/Portfolio/about/".slice(11) → "about/"
+// bae !== "/" -> no base, site at root, nothing to remove
+const base = import.meta.env.BASE_URL;
+let pathname = Astro.url.pathname;
+if (base !== "/" && pathname.startsWith(base)) {
+	pathname = "/" + pathname.slice(base.length);
+}
+
+// path is clean, without base
+// remove /en if path contain it
+const pathWithoutLocalePrefix = pathname.replace(/^\/en(\/|$)/, "/") || "";
+
+// give neutral path, eg: /about/, without language indicator
+// fr -> base + no en + neutral path -> /Portfolio/about/
+// en -> base + en + neutral path -> /Portfolio/en/about/
+const frUrl = getRelativeLocaleUrl("fr", pathWithoutLocalePrefix);
+const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
+---
+<button
+	id="lang-toggle"
+	class="lang-toggle"
+	role="switch"
+	aria-checked={isEn ? "true" : "false"}
+	aria-label={isEn ? "Switch to French" : "Passer en anglais"}
+	data-fr-url={frUrl}
+	data-en-url={enUrl}
+>
+	<span class="lang-toggle__label lang-toggle__label--fr" aria-hidden="true">FR</span>
+	<span class="lang-toggle__label lang-toggle__label--en" aria-hidden="true">EN</span>
+	<span class="lang-toggle__thumb"></span>
+</button>
+
+<style>
+	.lang-toggle {
+		--track-w: 68px;
+		--track-h: 32px;
+		--thumb-size: 26px;
+		--gap: 3px;
+
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		width: var(--track-w);
+		height: var(--track-h);
+		padding: 0;
+		border: none;
+		border-radius: 999px;
+		cursor: pointer;
+		background: var(--track-bg, #1e293b);
+		transition: background-color 0.3s ease;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.lang-toggle:focus-visible {
+		outline: 2px solid #60a5fa;
+		outline-offset: 2px;
+	}
+
+	/* Thumb slide */
+	.lang-toggle__thumb {
+		position: absolute;
+		top: var(--gap);
+		left: var(--gap);
+		width: var(--thumb-size);
+		height: var(--thumb-size);
+		border-radius: 50%;
+		background: #ffffff;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+		transform: translateX(0);
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.lang-toggle[aria-checked="true"] .lang-toggle__thumb {
+		transform: translateX(calc(var(--track-w) - var(--thumb-size) - 2 * var(--gap)));
+	}
+
+	/* Libels FR / EN */
+	.lang-toggle__label {
+		position: relative;
+		z-index: 1;
+		width: 50%;
+		text-align: center;
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		color: rgba(255, 255, 255, 0.55);
+		transition: color 0.3s ease;
+		user-select: none;
+	}
+
+	.lang-toggle[aria-checked="false"] .lang-toggle__label--fr {
+		color: #0f172a;
+	}
+	.lang-toggle[aria-checked="true"] .lang-toggle__label--en {
+		color: #0f172a;
+	}
+
+	/* Day theme version */
+	:global([data-theme="light"]) .lang-toggle {
+		background: #e2e8f0;
+	}
+</style>
+
+<script>
+	function initLangToggle() {
+		const toggle = document.getElementById("lang-toggle");
+		if (!toggle) return;
+
+		toggle.addEventListener("click", () => {
+		const isEn = toggle.getAttribute("aria-checked") === "true";
+		const targetUrl = isEn
+			? toggle.dataset.frUrl
+			: toggle.dataset.enUrl;
+
+		if (targetUrl) {
+			// memory choice for next visit
+			localStorage.setItem("preferredLocale", isEn ? "fr" : "en");
+			window.location.href = targetUrl;
+		}
+		});
+	}
+
+	// Réinitialise le listener après chaque navigation Astro (View Transitions)
+	document.addEventListener("astro:page-load", initLangToggle);
+</script>

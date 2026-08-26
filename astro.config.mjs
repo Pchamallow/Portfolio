@@ -29,6 +29,11 @@ export default defineConfig({
 			},
 		],
 	},
+	i18n: {
+		defaultLocale: "fr",
+		locales: ["fr", "en"],
+		routing: { prefixDefaultLocale: false },
+	},
 	integrations: [react(), tailwind(), sitemap()],
 	site: template.website_url,
 	base: template.base,

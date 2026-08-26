@@ -7,6 +7,7 @@ import ThemeSelector from '../components/ui/ThemeSelector.astro'
 import Navbar from '../components/ui/Navbar.astro'
 import Head from '../components/Head.astro'
 import { Font } from 'astro:assets';
+import LanguageToggle from '../components/LanguageToggle.astro';
 
 import { seo, profile, template } from '../settings'
 import Footer from '../components/ui/Footer.astro'
@@ -41,6 +42,7 @@ const {
 			<!-- Drawer content -->
 			<div class='drawer-content bg-base-100'>
 				<div class='bg-base-100 z-50 text-base-content shadow-sm'>
+					<LanguageToggle />
 					<nav class='navbar'>
 						<div class='navbar-start'>
 							{template.menu_left &&
