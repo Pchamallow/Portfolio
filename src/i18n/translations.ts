@@ -50,7 +50,7 @@ export const translations = {
 				duration : "",
 				title: "Matcha",
 				description: "A dating web application designed to facilitate connections between potential partners, covering the entire user journey from registration to the final meeting.",
-				skills: "",
+				skills: "ADD SKILLS !!!!!!!!!!!!!!!!!!!",
 			},
 		},
 	},
