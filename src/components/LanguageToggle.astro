@@ -36,6 +36,9 @@ const pathWithoutLocalePrefix = pathname.replace(/^\/en(\/|$)/, "/") || "";
 const frUrl = getRelativeLocaleUrl("fr", pathWithoutLocalePrefix);
 const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 ---
+
+
+
 <button
 	id="lang-toggle"
 	class="lang-toggle"
@@ -66,7 +69,7 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 		border: none;
 		border-radius: 10px;
 		cursor: pointer;
-		background: var(--track-bg, #3e5c8b);
+		background: var(--track-bg, #7e9bc9);
 		transition: background-color 0.3s ease;
 		-webkit-tap-highlight-color: transparent;
 	}
@@ -78,6 +81,7 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 
 	/* Thumb slide white round */
 	.lang-toggle__thumb {
+		font-size: clamp(16px, 4vw, 20px);
 		position: absolute;
 		top: var(--gap);
 		left: var(--gap);
@@ -94,13 +98,38 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 		transform: translateX(calc(var(--track-w) - var(--thumb-size) - 2 * var(--gap)));
 	}
 
+	@font-face {
+		font-family: 'Playfair';
+		src: url('/src/assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('ttf');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap; /* Crucial pour la performance */
+	}
+
+	@font-face {
+		font-family: 'manrope';
+		src: url('/src/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('ttf');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap; /* Crucial pour la performance */
+	}
+
+	@font-face {
+		font-family: 'roboto';
+		src: url('/src/assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('ttf');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap; /* Crucial pour la performance */
+	}
+
 	/* Libels FR / EN */
 	.lang-toggle__label {
+		font-family: "manrope", sans-serif;
 		position: relative;
 		z-index: 1;
 		width: 50%;
 		text-align: center;
-		font-size: 11px;
+		font-size: 15px;
 		font-weight: 700;
 		letter-spacing: 0.02em;
 		color: rgba(255, 255, 255, 0.55);
@@ -109,10 +138,10 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 	}
 
 	.lang-toggle[aria-checked="false"] .lang-toggle__label--fr {
-		color: #0f172a;
+		color: #3b4a63;
 	}
 	.lang-toggle[aria-checked="true"] .lang-toggle__label--en {
-		color: #0f172a;
+		color: #3b4a63;
 	}
 
 	/* Day theme version */
@@ -122,21 +151,23 @@ const enUrl = getRelativeLocaleUrl("en", pathWithoutLocalePrefix);
 </style>
 
 <script>
+	import { navigate } from "astro:transitions/client";
+
 	function initLangToggle() {
 		const toggle = document.getElementById("lang-toggle");
 		if (!toggle) return;
 
 		toggle.addEventListener("click", () => {
-		const isEn = toggle.getAttribute("aria-checked") === "true";
-		const targetUrl = isEn
-			? toggle.dataset.frUrl
-			: toggle.dataset.enUrl;
+			const isEn = toggle.getAttribute("aria-checked") === "true";
+			const targetUrl = isEn
+				? toggle.dataset.frUrl
+				: toggle.dataset.enUrl;
 
-		if (targetUrl) {
-			// memory choice for next visit
-			localStorage.setItem("preferredLocale", isEn ? "fr" : "en");
-			window.location.href = targetUrl;
-		}
+			if (targetUrl) {
+				// memory choice for next visit
+				localStorage.setItem("preferredLocale", isEn ? "fr" : "en");
+				navigate(targetUrl);
+			}
 		});
 	}
 
