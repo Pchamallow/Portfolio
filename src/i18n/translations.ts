@@ -17,15 +17,40 @@ export const translations = {
 		download: "Télécharger",
 		},
 		roadmap: {
-			projetsCC: {
+			cc: {
 				date : "Octobre 2025 - Novembre 2026",
-				title: "CC",
-				description: "All project of common core 42.",
+				duration : "1 year 1 month",
+				title: "",
+				description: "All projects of common core 42.",
+				skills: "Programming, Unix logic, Sorting algorithm, Object-oriented, Graphics, Network, Docker, System"
 			},
 			linearRegression: {
 				date : "Novembre 2026",
-				title: "ft_linear_regression",
-				description: "",
+				duration : "2 weeks",
+				title: "Linear Regression",
+				description: "A machine learning algorithm that predicts the price of a car by using a linear function train with a gradient descent algorithm.",
+				skills: "DataScience, Math, Algorithms & AI, DB & Data",
+			},
+			learnTwoSlither: {
+				date : "Novembre - Décembre 2026",
+				duration : "3 weeks",
+				title: "Learn 2 Slither",
+				description: "A cutting-edge Q-learning project focused on autonomous decision-making in a dynamic environment.",
+				skills: "DataScience, Algorithms & AI, Adaptation & creativity",
+			},
+			inceptionOfThings: {
+				date : " 2026",
+				duration : " weeks",
+				title: "",
+				description: "Built and configured a Docker-based cluster, along with a fully functional continuous integration (CI) pipeline for application development and testing.",
+				skills: "System administration, Docker-kuber, Network & system administration",
+			},
+			matcha: {
+				date : "",
+				duration : "",
+				title: "Matcha",
+				description: "A dating web application designed to facilitate connections between potential partners, covering the entire user journey from registration to the final meeting.",
+				skills: "",
 			},
 		},
 	},
@@ -45,7 +70,44 @@ export const translations = {
 		},
 		cv: {
 		download: "Download",
-		}
+		},
+		roadmap: {
+			cc: {
+				date : "Octobre 2025 - Novembre 2026",
+				duration : "1 year 1 month",
+				title: "",
+				description: "All projects of common core 42.",
+				skills: "Programming, Unix logic, Sorting algorithm, Object-oriented, Graphics, Network, Docker, System"
+			},
+			linearRegression: {
+				date : "Novembre 2026",
+				duration : "2 weeks",
+				title: "Linear Regression",
+				description: "A machine learning algorithm that predicts the price of a car by using a linear function train with a gradient descent algorithm.",
+				skills: "DataScience, Math, Algorithms & AI, DB & Data",
+			},
+			learnTwoSlither: {
+				date : "Novembre - Décembre 2026",
+				duration : "3 weeks",
+				title: "Learn 2 Slither",
+				description: "A cutting-edge Q-learning project focused on autonomous decision-making in a dynamic environment.",
+				skills: "DataScience, Algorithms & AI, Adaptation & creativity",
+			},
+			inceptionOfThings: {
+				date : " 2026",
+				duration : " weeks",
+				title: "",
+				description: "Built and configured a Docker-based cluster, along with a fully functional continuous integration (CI) pipeline for application development and testing.",
+				skills: "System administration, Docker-kuber, Network & system administration",
+			},
+			matcha: {
+				date : "",
+				duration : "",
+				title: "Matcha",
+				description: "A dating web application designed to facilitate connections between potential partners, covering the entire user journey from registration to the final meeting.",
+				skills: "ADD SKILLS !!!!!!!!!!!!!!!!!!!",
+			},
+		},
 	}
 } as const;
 

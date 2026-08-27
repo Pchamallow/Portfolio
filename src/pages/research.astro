@@ -1,89 +1,25 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import { experiences, education, skills, publications } from '../data/research'
-import CvTimeline from '../components/ui/CvTimeline.astro'
+import Layout from '../layouts/Layout.astro'
 
-import type { Experience, Education, Publication } from '../types/roadmap'
-import List from '@/components/ui/List.astro'
-import PublicationsList from '@/components/ui/PublicationsList.astro'
+import { profile } from '@/settings'
+import Grid from '@/components/ui/Grid.astro'
 
-let orderedExperiences: Experience[] = []
-let orderedEducations: Education[] = []
-let orderedPublications: Publication[] = []
+import Roadmap from '../components/ui/Roadmap.astro'
 
-const orderElement = <T extends { time: string }>(a: T, b: T) => {
-  const presentValues = ['present', 'now', 'current', 'today']
-  if (
-			presentValues.includes(
-				(a['time'] as string)?.split(' - ')[1]?.toLowerCase()
-			)
-		) {
-			// If the date is 'present', it should be the first element
-			return -1
-		}
-		const dateA = new Date((a['time'] as string)?.split(' - ')[1])
-		const dateB = new Date((b['time'] as string)?.split(' - ')[1])
-		return dateB.getTime() - dateA.getTime()
-}
+const { research_areas } = profile
 
-if (experiences.length > 0) {
-	orderedExperiences = experiences.sort((a, b) => {
-		return orderElement(a, b)
-	})
-}
-
-if (education.length > 0) {
-	orderedEducations = education.sort((a, b) => {
-		return orderElement(a, b)
-	})
-}
-
-if (publications.length > 0) {
-	orderedPublications = publications.sort((a, b) => {
-		return orderElement(a, b)
-	})
-}
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	{
-		orderedEducations.length > 0 && (
-			<section class='mb-12'>
-				<h2 class='text-2xl font-bold mb-6 border-b pb-2'>
-					Education
-				</h2>
-				<CvTimeline elements={orderedEducations} colored={true} lang="fr"/>
-			</section>
-		)
-	}
+	<section class='flex items-center gap-12 border-b pb-12'>
+		<Roadmap
+			lang="fr"
+		/>
+	</section>
 
-	{
-		orderedExperiences.length > 0 && (
-			<section class='mb-12'>
-				<h2 class='text-2xl font-bold mb-6 border-b pb-2'>
-					Experiences
-				</h2>
-				<CvTimeline elements={orderedExperiences} colored={true} />
-			</section>
-		)
-	}
-
-	{
-		orderedPublications.length > 0 && (
-			<section class='mb-12'>
-				<h2 class='text-2xl font-bold mb-6 border-b pb-2'>
-					Last publications
-				</h2>
-				<PublicationsList elements={orderedPublications}/>
-			</section>
-		)
-	}
-
-	{
-		skills.length > 0 && (
-			<section class='mb-12'>
-				<List listTitle='Skills' listItems={skills}/>
-			</section>
-		)
-	}
+	<section class='py-12 border-b'>
+		<Grid gridTitle='Tech Stack' gridItems={research_areas} />
+	</section>
 </Layout>

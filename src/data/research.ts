@@ -1,10 +1,11 @@
+
 export const experiences = [
 	{
-		company: '1',
+		company: '',
 		time: '2',
-		title: '333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333',
+		title: 'Tronc commun 42',
 		location: '4',
-		description: '5',
+		description: 'Ensemble des projets en solo ou en binôme à réaliser dans le cadre du tronc commun',
 	},
 	{
 		company: '1',
