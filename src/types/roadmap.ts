@@ -43,3 +43,31 @@ export function isSkill(element: Skill | Publication): element is Skill {
 export function isPublication(element: Skill | Publication): element is Publication {
   return 'authors' in element;
 }
+
+export const roadmap = {
+  education: [
+    {
+      degree: "Ph.D. in Computer Science",
+      institution: "University of Example",
+      year: "2020",
+    },
+    {
+      degree: "M.Sc. in Computer Science",
+      institution: "University of Example",
+      year: "2016",
+    },
+  ],
+  experience: [
+    {
+      title: "Research Scientist",
+      company: "Example Research Lab",
+      year: "2021-Present",
+    },
+    {
+      title: "Software Engineer",
+      company: "Tech Company",
+      year: "2016-2021",
+    },
+  ]
+};
+
