@@ -1,12 +1,26 @@
 export const experiences = [
 	{
 		company: '1',
-		time: '',
+		time: '2',
 		title: '333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333',
 		location: '4',
 		description: '5',
 	},
 	{
+		company: '1',
+		time: '',
+		title: '3',
+		location: '4',
+		description: '5',
+	},
+		{
+		company: '1',
+		time: '',
+		title: '3',
+		location: '4',
+		description: '5',
+	},
+			{
 		company: '1',
 		time: '',
 		title: '3',

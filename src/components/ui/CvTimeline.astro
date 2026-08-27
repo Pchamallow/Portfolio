@@ -5,13 +5,14 @@ import type { Experience, Education } from '@/types/roadmap';
 interface Props {
 	elements: (Experience | Education)[]
 	colored: boolean
+	lang: string
 }
 
 const { elements, colored } = Astro.props
 ---
 
 <ul
-	class='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'
+	class='timeline timeline-snap-icon timeline-compact timeline-vertical min-w-0 w-full'
 >
 	{
 		elements.map((element, index) => (
@@ -21,19 +22,19 @@ const { elements, colored } = Astro.props
 						xmlns='http://www.w3.org/2000/svg'
 						viewBox='0 0 20 20'
 						fill='currentColor'
-            class:list={[{ 'text-accent': colored }, 'h-5 w-5']}
+						class:list={[{ 'text-accent': colored }, 'h-5 w-5']}
 					>
 						<circle cx='10' cy='10' r='6' />
 					</svg>
 				</div>
-				<div class='timeline-end mb-10'>
+				<div class='timeline-end mb-10 min-w-0 w-full'>
 					<time class='font-mono italic'>{element.time}</time>
 					<div class='text-lg font-black'>{isExperience(element) ? element.title : element.degree}</div>
 					<div>{element.description}</div>
 					<div>{isExperience(element) ? element.company : element.school}</div>
 					<div>{element.location}</div>
 				</div>
-        <hr class:list={[{ 'bg-accent': colored }]} />
+			<hr class:list={[{ 'bg-accent': colored }]} />
 			</li>
 		))
 	}

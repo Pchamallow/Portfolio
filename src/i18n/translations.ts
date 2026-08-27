@@ -15,7 +15,19 @@ export const translations = {
 		},
 		cv: {
 		download: "Télécharger",
-		}
+		},
+		roadmap: {
+			projetsCC: {
+				date : "Octobre 2025 - Novembre 2026",
+				title: "CC",
+				description: "All project of common core 42.",
+			},
+			linearRegression: {
+				date : "Novembre 2026",
+				title: "ft_linear_regression",
+				description: "",
+			},
+		},
 	},
 	en: {
 		hero: {
