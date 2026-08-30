@@ -11,7 +11,7 @@ export const translations = {
 		],
 		availability: "🎯 En recherche d'une alternance de 2 ans en vue d'un RNCP 7 (Bac + 5 / Master) - Web, Data ou IA - Angoulême, Poitiers, Bordeaux, Télétravail",
 		onSiteLabel: "Sur ce site",
-		onSiteText: "Vous pourrez explorer mes projets web et data, ma roadmap (web, data, IA), et mon CV. Chaque page projet inclut l'objectif, les compétences utilisées, une vidéo d'exploration, et un lien vers le repo GitHub."
+		onSiteText: "Vous pourrez explorer mon CV, ma tech stack, mes projets, et ma roadmap (web, data, IA). Chaque page projet inclut l'objectif, les compétences utilisées, une vidéo d'exploration, et un lien vers le repo GitHub."
 		},
 		cv: {
 		download: "Télécharger",
@@ -66,7 +66,7 @@ export const translations = {
 		],
 		availability: "🎯 Looking for an alternance in Web, Data or AI - 2 years - available from January 2027 - Angoulême, Poitiers, Bordeaux, Full remote",
 		onSiteLabel: "On this website",
-		onSiteText: "You can explore my projects across web and data, my roadmap for what's in progress and coming next (web, data, AI), and my CV. Each project page includes the goal, the skills involved, demo videos, and a link to the GitHub repo."
+		onSiteText: "You can explore my CV, my tech stack, my projects and my roadmap for what's in progress and coming next (web, data, AI). Each project page includes the goal, the skills involved, demo videos, and a link to the GitHub repo."
 		},
 		cv: {
 		download: "Download",
