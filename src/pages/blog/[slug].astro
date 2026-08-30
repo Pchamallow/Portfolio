@@ -60,7 +60,7 @@ const { Content } = await render(post);
 						tags && (
 							<div class='flex flex-wrap gap-2'>
 								{tags.map(tag => (
-									<span class='badge badge-accent badge-outline'>{tag}</span>
+									<span class='badge badge-accent badge-lg'>{tag}</span>
 								))}
 							</div>
 						)
@@ -82,7 +82,12 @@ const { Content } = await render(post);
          prose-ol:list-decimal prose-ol:pl-6
          prose-li:mb-2
          prose-img:rounded-lg prose-img:my-8'
-        >
+		>
+				<style>
+					:global(.prose table tbody td) {
+						vertical-align: top;
+					}
+				</style>
                 <Content />
 			</div>
 		</article>
