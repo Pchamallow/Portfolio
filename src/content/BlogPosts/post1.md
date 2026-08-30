@@ -3,15 +3,17 @@ title: "Clownder"
 date: "2026-08-03"
 endDate: "2027-03-01"
 duration: "8 mois"
+statut: ""
 tags: ["Web", "Data"]
 excerpt: "An account of the discovery of radium and its properties."
 ---
-## Web / Data
-[![](https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ)](https://youtu.be/dQw4w9WgXcQ)
-
 
 🚧 **Projet en cours** 🚧
 *Certifié sans clowns*
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ)](https://youtu.be/dQw4w9WgXcQ)
+
+
 
 Clownder est une application web de rencontre conçue pour faciliter les connexions entre partenaires potentiels, couvrant tout le parcours utilisateur — de l'inscription à la rencontre finale.
 

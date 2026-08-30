@@ -1,12 +1,16 @@
 ---
 title: "Animshell"
-date: "1902-12-26"
+date: "2026-04-26"
+endDate: "2026-06-14"
+duration: "~2 mois"
 tags: ["Système", "C"]
 excerpt: "An account of the discovery of radium and its properties."
 ---
-[![](https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ)](https://youtu.be/dQw4w9WgXcQ)
 
 ✅ **Projet terminé**
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ)](https://youtu.be/dQw4w9WgXcQ)
+
 
 Animshell est une réimplémentation simplifiée du shell Bash, développée en C dans le cadre du cursus 42.
 L'objectif : reconstruire le comportement d'un shell Unix — lecture de commandes, exécution de processus,
