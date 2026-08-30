@@ -1,37 +1,51 @@
 ---
-title: "The Discovery of Radium"
+title: "Clownder"
 date: "1902-12-26"
-tags: ["Physics", "Research"]
+tags: ["Web", "Data"]
 excerpt: "An account of the discovery of radium and its properties."
 ---
+[![](https://markdown-videos-api.jorgenkh.no/youtube/dQw4w9WgXcQ)](https://youtu.be/dQw4w9WgXcQ)
 
-# The Discovery of Radium
+### <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-icon lucide-circle"><circle cx="12" cy="12" r="6"/></svg> Clownder - Web / Data
 
-The discovery of radium marked a significant milestone in the field of radioactivity research.
+🚧 **Projet en cours** 🚧
+*Certifié sans clowns*
 
-## The Research Process
+Clownder est une application web de rencontre conçue pour faciliter les connexions entre partenaires potentiels, couvrant tout le parcours utilisateur — de l'inscription à la rencontre finale.
 
-In 1898, my husband Pierre and I discovered the element radium. This discovery was the result of years of research and experimentation. Radium is a highly radioactive element with remarkable properties...
+👥 **Développé en collaboration avec [AgarOther](https://github.com/AgarOther)**. <br>
+Ceci est un **projet de spécialisation** (nommé par défaut Matcha), commencé de façon proactive pendant le tronc commun de 42.
 
-### Key Findings
+#### Mes réalisations :
+- Connexion / authentification
+- Cookie
+- Sécurisation des mots de passe (hachage)
+- Apparence (CSS)
 
-- Radium is highly radioactive
-- It produces luminescence
-- It has potential medical applications
+*Nous avons travaillé en étroite collaboration et pris soin de relire mutuellement notre code, afin de bien comprendre l'intégralité de la base de code.*
 
-## Experimental Methods
+#### Avancement actuel ✅
+- [X] Configuration avec **Vite**
+- [X] Séparation propre frontend/backend avec **Docker**
+- [X] Intégration de la base de données **SQLite**
+- [X] Flux d'**inscription** utilisateur
+- [X] **Connexion / authentification** (Cookie / Token)
+- [X] Vérification par email
+- [X] Déconnexion
+- [X] Réinitialisation du mot de passe
+- [X] Sécurisation des mots de passe (hachage avec bcrypt)
+- [X] Barre de recherche
 
-Our research involved:
+#### Prochaines étapes 🚧
 
-1. Processing uraninite ore
-2. Chemical separation techniques
-3. Precise measurements of radioactivity
+- [ ] Algorithme de matching
+- [ ] Note de popularité (Fame rating)
+- [ ] Navigation avec filtres/tri
 
-### Technical Challenges
 
-> The processing of pitchblende was a particularly challenging task, requiring tons of raw material to obtain mere decigrams of radium.
+L'état actuel du développement est indiqué ci-dessous, mis à jour au fur et à mesure des fonctionnalités terminées.
 
-Some code we used for calculations:
-`E = mc²`
 
-You can read more about our research [here](#).
+|Languages| Front-end | Back-end | Database| Outils |
+|---------|-----------|----------|---------|--------|
+|[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000)](#)<br>[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff)](#)|[![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](#) [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](#) [![CSS](https://img.shields.io/badge/CSS-639?style=for-the-badge&logo=css&logoColor=fff)](#) <br> [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](#) | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](#) <br> [![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)](#) <br> |[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=fff)](#) <br> [![SQLite](https://img.shields.io/badge/SQLite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)](#)|[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=fff)](#) [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=fff)](#) <br> [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=fff)](#) [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=fff)](#)|
