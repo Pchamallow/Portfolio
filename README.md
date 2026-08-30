@@ -6,8 +6,9 @@ modifications des themes
 ajout de la tech stack avec implementation des badges 
 organsitaion des segements 
 
-
-
+template de Matteo Barbero
+'http://maiobarbero.dev'
+https://github.com/maiobarbero/astro_academia
 
 ## What is Astro Academia?
 
