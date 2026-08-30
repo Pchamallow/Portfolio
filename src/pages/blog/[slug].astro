@@ -17,7 +17,7 @@ export async function getStaticPaths(): Promise<Array<{ params: { slug: string }
     return posts
 }
 const {post} = Astro.props;
-const { title, date, tags} = post.data; 
+const { title, date, endDate, duration, tags} = post.data; 
 const { Content } = await render(post);
 ---
 
@@ -34,7 +34,7 @@ const { Content } = await render(post);
 					<time datetime={date} class='flex items-center'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
-							class='h-4 w-4 mr-2'
+							class='h-6 w-6 mr-2'
 							fill='none'
 							viewBox='0 0 24 24'
 							stroke='currentColor'
@@ -53,6 +53,34 @@ const { Content } = await render(post);
 								day: 'numeric',
 							})
 						}
+					</time>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+					<time datetime={endDate} class='flex items-center'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							class='h-6 w-6 mr-2'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke='currentColor'
+						>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								stroke-width='2'
+								d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+							></path>
+						</svg>
+						{
+							new Date(endDate).toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric',
+							})
+						}
+					<div class='flex items-center'>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-fading-icon lucide-clock-fading"><path d="M12 2a10 10 0 0 1 7.38 16.75"/><path d="M12 6v6l4 2"/><path d="M2.5 8.875a10 10 0 0 0-.5 3"/><path d="M2.83 16a10 10 0 0 0 2.43 3.4"/><path d="M4.636 5.235a10 10 0 0 1 .891-.857"/><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"/></svg>
+					</div>
+					{duration}
 					</time>
 
 					<!-- Tags -->

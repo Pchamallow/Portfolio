@@ -1,6 +1,8 @@
 ---
 title: "Clownder"
-date: "1902-12-26"
+date: "2026-08-03"
+endDate: "2027-03-01"
+duration: "8 mois"
 tags: ["Web", "Data"]
 excerpt: "An account of the discovery of radium and its properties."
 ---
