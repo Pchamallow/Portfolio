@@ -16,6 +16,41 @@ const t = translations[lang].roadmap;
 			Roadmap
 		</h1>
 	</section>
+	<section class='grid grid-cols-[200px_1fr] gap-12 border-b pb-12'>
+		<div class='flex items-center space-x-2'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-goal-icon lucide-goal"><path d="M12 13V2l8 4-8 4"/><path d="M20.561 10.222a9 9 0 1 1-12.55-5.29"/><path d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/></svg>
+			<h2 class="text-3xl font-[family-name:var(--font-manrope)]">
+				{t.goals.title}
+			</h2>
+		</div>
+		<div class="text-2xl font-[family-name:var(--font-manrope)] space-x-2">
+			D 'ici Janvier 2027 : <br>
+			<div class='flex items-center space-x-2'>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-dot-right-horizontal-icon lucide-line-dot-right-horizontal"><path d="M 3 12 L 15 12"/><circle cx="18" cy="12" r="3"/></svg>
+				<div class='space-x-2''>
+					{t.goals.goal1}<br>
+				</div>
+			</div>
+			<div class='flex items-center space-x-2'>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-dot-right-horizontal-icon lucide-line-dot-right-horizontal"><path d="M 3 12 L 15 12"/><circle cx="18" cy="12" r="3"/></svg>
+				<div class='space-x-2''>
+					{t.goals.goal2}<br>
+				</div>
+			</div>
+			<div class='flex items-center space-x-2'>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-dot-right-horizontal-icon lucide-line-dot-right-horizontal"><path d="M 3 12 L 15 12"/><circle cx="18" cy="12" r="3"/></svg>
+				<div class='space-x-2''>
+					{t.goals.goal3}
+				</div>
+			</div>
+			<div class='flex items-center space-x-2'>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-dot-right-horizontal-icon lucide-line-dot-right-horizontal"><path d="M 3 12 L 15 12"/><circle cx="18" cy="12" r="3"/></svg>
+				<div class='space-x-2''>
+					{t.goals.goal4}
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<br>
 	<section class="grid grid-cols-[200px_1fr] gap-12 border-b pb-12">
@@ -43,7 +78,7 @@ const t = translations[lang].roadmap;
 			<div class="text-xl font-[family-name:var(--font-manrope)]">
 				{t.matcha.description}
 			</div>
-			<div class="text-xl font-[family-name:var(--font-manrope)]">
+			<div class="text-xl italic font-[family-name:var(--font-manrope)]">
 				{t.matcha.skills}
 			</div>
 		</div>
@@ -61,10 +96,13 @@ const t = translations[lang].roadmap;
 		</div>
 		<div class="flex flex-col gap-4">
 			<h3 class="text-2xl font-[family-name:var(--font-manrope)]">
+				{t.linearRegression.title}
+			</h3>
+			<h3 class="text-xl font-[family-name:var(--font-manrope)]">
 				{t.linearRegression.description}
 			</h3>
 
-			<h3 class="text-xl font-[family-name:var(--font-manrope)]">
+			<h3 class="text-xl italic font-[family-name:var(--font-manrope)]">
 				{t.linearRegression.skills}
 			</h3>
 		</div>
@@ -73,6 +111,7 @@ const t = translations[lang].roadmap;
 	<br>
 	<section class="grid grid-cols-[200px_1fr] gap-12 border-b pb-12">
 		<div>
+		
 			<h2 class="text-2xl font-[family-name:var(--font-manrope)]">
 				{t.learnTwoSlither.date}
 			</h2>
@@ -82,10 +121,13 @@ const t = translations[lang].roadmap;
 		</div>
 		<div class="flex flex-col gap-4">
 			<h3 class="text-2xl font-[family-name:var(--font-manrope)]">
+				{t.learnTwoSlither.title}
+			</h3>
+			<h3 class="text-xl font-[family-name:var(--font-manrope)]">
 				{t.learnTwoSlither.description}
 			</h3>
 
-			<h3 class="text-xl font-[family-name:var(--font-manrope)]">
+			<h3 class="text-xl italic font-[family-name:var(--font-manrope)]">
 				{t.learnTwoSlither.skills}
 			</h3>
 		</div>
